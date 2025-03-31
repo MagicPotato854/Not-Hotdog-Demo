@@ -1,0 +1,68 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 0.5em;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#stop {
+  background-color: #f44336; /* Red */
+  display: none;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20px 0px 20px 0px;
+}
+
+.dawg {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 20px 0px 20px 0px;
+}
+
+#label-container {
+    display: none;
+}
+
+#webcam-container {
+  margin-top: 20px; 
+}
+
+#webcam-container canvas, 
+#webcam-container video {
+  border-radius: 5%;
+  width: 75vw;
+  height: auto;
+  max-width: 400px;
+}
+
+#speedometer-container {
+  margin: 20px 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#speedometer-container span {
+  margin: 0 10px;
+  font-weight: bold;
+  transition: 1ms;
+}

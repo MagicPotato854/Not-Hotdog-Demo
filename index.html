@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hotdog Detector 5000</title>
+</head>
+
+<body>
+    <div class="title">Hotdog Detector 5000</div>
+    <div>Are you a hotdog? Press start and enable webcam to find out!</div>
+    <button type='button' id="start" onclick='init()'>Start</button>
+    <button type='button' id="stop" onclick='stop()'>Stop</button>
+    <div id='webcam-container'></div>
+    <div id='label-container'></div>
+    <div class="dawg" id='guess-container'></div>
+
+    <!-- Place this markup where you want the speedometer to appear -->
+    <div id="speedometer-container">
+        <span>Not Hotdog</span>
+        <meter id="speedometer" min="0" max="1" value="0" style="width:200px;"></meter>
+        <span>Hotdog</span>
+    </div>
+
+    <!--SCRIPTS-->
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.3/dist/teachablemachine-image.min.js">
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
