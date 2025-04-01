@@ -94,7 +94,9 @@ async function predict() {
     const classPrediction =
       prediction[i].className +
       ": " +
-      `<span style="color: ${color}">${prediction[i].probability.toFixed(2)}</span>`;
+      `<span style="color: ${color}">${prediction[i].probability.toFixed(
+        2
+      )}</span>`;
     labelContainer.childNodes[i].innerHTML = classPrediction;
   }
 
@@ -111,7 +113,9 @@ async function predict() {
   // Update guess and confidence only once every second
   if (Date.now() >= nextUpdateTime) {
     const confColor = guess === "Hotdog" ? "green" : "red";
-    guessContainer.innerHTML = `${guess}<br>Confidence: <span style="color: ${confColor}">${(confidence * 100).toFixed(0)}%</span>`;
+    guessContainer.innerHTML = `${guess}<br>Confidence: <span style="color: ${confColor}">${(
+      confidence * 100
+    ).toFixed(0)}%</span>`;
     // Always use hotdog probability for the speedometer
     animateSpeedometer(hotdog);
     nextUpdateTime = Date.now() + 10;
